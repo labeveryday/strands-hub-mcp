@@ -26,6 +26,32 @@ This server **does not hardcode your S3 bucket**. It uses the same environment v
 - Python 3.10+
 - AWS credentials available to `boto3`
 
+## Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/labeveryday/strands-hub-mcp.git
+cd strands-hub-mcp
+```
+
+2. **Install dependencies:**
+
+You'll need `strands-hub` installed. If you have it locally:
+
+```bash
+# If strands-hub is a sibling directory
+pip install -e ../strands-hub
+# Or install from GitHub
+pip install git+https://github.com/labeveryday/strands-hub.git
+```
+
+3. **Install this package:**
+
+```bash
+pip install -e .
+```
+
 ## Configure
 
 Set the same env vars you use for `strands-hub`:
@@ -39,16 +65,6 @@ export AGENT_HUB_LOCAL_DIR=./.agent_hub
 ```
 
 Tip: if you already have these in a `.env`, load it before starting the MCP server.
-
-
-## Install (local dev)
-
-If you're developing next to the `strands-hub` repo:
-
-```bash
-pip install -e ../strands-hub
-pip install -e .
-```
 
 ## Run
 
