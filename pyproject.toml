@@ -15,11 +15,14 @@ authors = [
 dependencies = [
   "mcp>=1.0.0",
   "boto3>=1.34.0",
-  "strands-hub>=0.1.0",
+  "strands-hub @ git+https://github.com/labeveryday/strands-hub.git",
 ]
 
 [project.scripts]
 strands-hub-mcp = "strands_hub_mcp.server:main"
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/strands_hub_mcp"]
